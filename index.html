@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="-Query.css">
     <title>Media Query</title>
 </head>
-<body>
+<body onresize="mudou()">
     <header>
         <h1>Meu Site</h1>
         <i id="Menu" class="material-icons"  onclick="clickMenu()">menu</i>
@@ -32,6 +32,13 @@
         </article>
     </main>
     <script>
+        function mudou() {
+            if (window.innerWidth >= 768){
+                itens.style.display = 'block'
+            } else{
+                itens.style.display = 'none '
+            }
+        }
         function clickMenu() {
             if (itens.style.display == 'block'){
                 itens.style.display = 'none'
